@@ -1,5 +1,7 @@
 # Xkcd936
 
+[![Gem Version](https://badge.fury.io/rb/xkcd936.svg)](http://badge.fury.io/rb/xkcd936)
+
 [xkcd936](https://www.xkcd.com/936/) style passphrase generator.
 
 But we use 5 words instead of 4, since 5 words will achieve an entropy of:
