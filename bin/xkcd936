@@ -1,0 +1,3 @@
+require 'xkcd936'
+
+puts Xkcd936.generate_passphrase
