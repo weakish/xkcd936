@@ -6,7 +6,7 @@
 
 But we use 5 words instead of 4, since 5 words will achieve an entropy of:
 
-$$log(99171)/log(2)*5 = 82.988$$
+    log(99171)/log(2)*5 = 82.988
 
 This is enough.
 NIST recommends 80-bits for the most secure passwords.
