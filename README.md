@@ -4,7 +4,7 @@
 
 [xkcd936](https://www.xkcd.com/936/) style passphrase generator.
 
-But we use 5 words instead of 4, since 5 words will achieve an entropy of:
+But we use 5 words as default instead of 4, since 5 words will achieve an entropy of:
 
     log(99171)/log(2)*5 = 82.988
 
@@ -34,9 +34,10 @@ As a library:
 
 ```ruby
 require 'xkcd936'
-Xkcd936.generate_passphrase('path/to/dictionary/file')
+Xkcd936.generate_passphrase(4, 'path/to/dictionary/file')
 ```
 
+If you does not specify how many words you want, it will use the default value `5`.
 If you does not give a path, it will use `/usr/share/dict/words` as default.
 
 As a command line tool:
