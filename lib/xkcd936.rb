@@ -1,4 +1,5 @@
-require "xkcd936/version"
+require 'xkcd936/version'
+require 'i18n'
 
 module Xkcd936
   module_function
@@ -13,6 +14,11 @@ module Xkcd936
   # @param [String] dict file path
   # @return [String] passphrase
   def generate_passphrase(dict='/usr/share/dict/words')
-    (IO.readlines(dict).sample(5).map { |s| s.chomp.capitalize }).join
+    pick_five = IO.readlines(dict).sample(5)
+    passphrase = pick_five.map { |s| s.chomp.capitalize }.join
+    # Let I18n skip validation and fall back to built in :en locale.
+    # Otherwise you need to have a locale file.
+    I18n.enforce_available_locales = false
+    I18n.transliterate(passphrase)
   end
 end
