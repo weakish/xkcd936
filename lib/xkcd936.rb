@@ -13,6 +13,9 @@ module Xkcd936
   #
   # @param [String] dict file path
   # @return [String] passphrase
+  #
+  # @example
+  #   generate_passphrase
   def generate_passphrase(dict='/usr/share/dict/words')
     pick_five = IO.readlines(dict).sample(5)
     passphrase = pick_five.map { |s| s.chomp.capitalize }.join

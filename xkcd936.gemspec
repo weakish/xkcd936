@@ -26,5 +26,8 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = '>= 1.9.3'
   spec.add_development_dependency 'bundler', '~> 1.3'
-  spec.add_development_dependency 'rake', '>= 10.0.0'
+  spec.add_development_dependency 'rake'
+  spec.add_development_dependency 'yard'
+  spec.add_development_dependency 'yard-doctest'
+  spec.add_development_dependency 'pry-rescue'
 end
