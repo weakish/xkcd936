@@ -1,8 +1,6 @@
-package main
-
 // Words from Webster's Second International Dictionary.
 // The 1934 copyright has elapsed.
-var words = []string{
+char *words[234937] = {
 "A",
 "a",
 "aa",
@@ -234940,4 +234938,4 @@ var words = []string{
 "zythum",
 "Zyzomys",
 "Zyzzogeton",
-}
+};
