@@ -27,6 +27,7 @@ int main() {
                 printf("%c", word[n]);
             }
         }
+        putchar('\n');
         return 0;
     } else if (secure == -1) {
         fprintf(stderr, "sodium_init() FAILED!");
