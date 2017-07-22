@@ -23,7 +23,7 @@ int main() {
         for (int i = 0; i < 4; i++) {
             char *word = words[random_numbers[i]];
             printf("%c", toupper(word[0]));
-            for (int n = 1; n < strlen(word); n++) {
+            for (size_t n = 1; n < strlen(word); n++) {
                 printf("%c", word[n]);
             }
         }
