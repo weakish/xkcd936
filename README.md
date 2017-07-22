@@ -2,15 +2,22 @@
 
 [xkcd936](https://www.xkcd.com/936/) style passphrase generator.
 
+## Dependencies
+
+- libsodium
+
 ## Installation
 
-### From source
+    git clone https://github.com/weakish/xkcd936
+    cd xkcd936
+    make
 
-    go install github.com/weakish/xkcd936
+To change C compiler (default to clang) and installation path (default to `/usr/local/bin`),
+edit `config.mk` before running `make`.
 
-### From binaries
+To uninstall, run `make uninstall`.
 
-FIXME upload binaries to GitHub releases
+The Makefile is compatible with both GNU make and BSD make.
 
 ## Usage
 
