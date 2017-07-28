@@ -19,6 +19,12 @@ To uninstall, run `make uninstall`.
 
 The Makefile is compatible with both GNU make and BSD make.
 
+To build a version with static linked libsodium, use [buck]:
+
+    buck build :xkcd936
+
+[buck]: https://buckbuild.com
+
 ## Usage
 
     xkcd936
