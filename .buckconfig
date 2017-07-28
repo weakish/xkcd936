@@ -1,0 +1,8 @@
+[project]
+  ignore = .git
+
+[repositories]
+  sodium = external/sodium
+
+[cxx]
+  ld = /usr/bin/gcc
