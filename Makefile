@@ -1,6 +1,6 @@
 include config.mk
 
-prompt_pwd: xkcd936.c
+xkcd936: xkcd936.c
 	${CC} ${CFLAGS} -lsodium -o xkcd936 web2.c xkcd936.c
 
 install:
