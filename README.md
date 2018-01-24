@@ -11,6 +11,7 @@
     git clone https://github.com/weakish/xkcd936
     cd xkcd936
     make
+    sudo make install
 
 To change C compiler (default to clang) and installation path (default to `/usr/local/bin`),
 edit `config.mk` before running `make`.
