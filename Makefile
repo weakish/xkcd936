@@ -4,7 +4,7 @@ xkcd936: xkcd936.c
 	${CC} ${CFLAGS} -lsodium -o xkcd936 web2.c xkcd936.c
 
 install:
-	@echo Installing to to ${PREFIX}/bin ...
+	@echo Installing xkcd to ${PREFIX}/bin ...
 	@mkdir -p ${PREFIX}/bin
 	@cp -f xkcd936 ${PREFIX}/bin
 	@chmod 755 ${PREFIX}/bin/xkcd936
