@@ -24,7 +24,7 @@ The Makefile is compatible with both GNU make and BSD make.
 ### As a Commandline Utility
 
 ```sh
-xkcd936 n # n is in [1, 12]
+xkcd936 n # n: from 1 to 12
 xkcd936   # defaults to 4
 ```
 

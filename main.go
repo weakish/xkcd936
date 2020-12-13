@@ -10,7 +10,7 @@ import (
 const version = "0.2.0"
 
 func usage(exitCode int) {
-	fmt.Print("xkcd936 [WORD_LIST_LENGTH]\n\nIf not specified, it will generate four words.\n")
+	fmt.Print("xkcd936 [LENGTH]\n\n1 <= LENGTH <= 12. If not specified, it will generate four words.\n")
 	os.Exit(exitCode)
 }
 
