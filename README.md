@@ -1,34 +1,49 @@
 # Xkcd936
 
-[xkcd936](https://www.xkcd.com/936/) style passphrase generator.
-
-## Dependencies
-
-- libsodium
+[xkcd936](https://www.xkcd.com/936/) style passphrase generator with BIP32 word list.
 
 ## Installation
+
+To compile from source, you need to have `go` installed.
 
     git clone https://github.com/weakish/xkcd936
     cd xkcd936
     make
     sudo make install
 
-To change C compiler (default to clang) and installation path (default to `/usr/local/bin`),
+To change installation path (default to `/usr/local/bin`),
 edit `config.mk` before running `make`.
 
 To uninstall, run `make uninstall`.
 
 The Makefile is compatible with both GNU make and BSD make.
 
-To build a version with static linked libsodium, use [buck]:
-
-    buck build :xkcd936
-
-[buck]: https://buckbuild.com
 
 ## Usage
 
-    xkcd936
+### As a Commandline Utility
+
+```sh
+xkcd936 n # n is in [1, 12]
+xkcd936   # defaults to 4
+```
+
+Example output:
+
+```go
+AdvanceJealousDevelopSenior
+```
+
+### As a Library
+
+```go
+import (
+	"github.com/weakish/xkcd936/xkcd936"
+)
+
+var words []string = xkcd936.Words(4) // e.g. []string{"cannon", "isolate", "soccer", "word"}
+var phrase string = xkcd936.Phrase(words) // e.g. "CannonIsolateSoccerWord"
+```
 
 ## License
 

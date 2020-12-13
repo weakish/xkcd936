@@ -1,3 +1,0 @@
-[submodule "external/sodium"]
-	path = external/sodium
-	url = git@github.com:njlr/libsodium.git

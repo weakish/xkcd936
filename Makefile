@@ -1,17 +1,18 @@
 include config.mk
 
-xkcd936: xkcd936.c
-	${CC} ${CFLAGS} -lsodium -o xkcd936 web2.c xkcd936.c
+bin/xkcd936: main.go xkcd936/xkcd936.go
+	@go build -o bin
 
 install:
-	@echo Installing xkcd to ${PREFIX}/bin ...
 	@mkdir -p ${PREFIX}/bin
-	@cp -f xkcd936 ${PREFIX}/bin
-	@chmod 755 ${PREFIX}/bin/xkcd936
+	@install bin/xkcd936 ${PREFIX}/bin
 
 uninstall:
-	@echo Uninstalling from ${PREFIX}/bin ...
 	@rm -f ${PREFIX}/bin/xkcd936
 
 clean:
-	@rm -f xkcd936
+	@rm -f bin/xkcd936
+
+test:
+	@cd xkcd936 && go test
+
