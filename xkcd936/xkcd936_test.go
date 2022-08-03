@@ -17,7 +17,7 @@ func TestPhraseTitlized(t *testing.T) {
 }
 
 func TestWords(t *testing.T) {
-	words := Words(4)
+	words := Words(4, "en")
 	if l := len(words); l != 4 {
 		t.Errorf("expect 4 words, got %d\n", l)
 	}
