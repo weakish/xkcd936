@@ -8,6 +8,7 @@ import (
 
 	"github.com/tyler-smith/go-bip39"
 	"github.com/tyler-smith/go-bip39/wordlists"
+	"github.com/weakish/xkcd936/morelists"
 )
 
 func Words(n int, lang string) []string {
@@ -36,6 +37,14 @@ func Words(n int, lang string) []string {
 		bip39.SetWordList(wordlists.Korean)
 	case "es":
 		bip39.SetWordList(wordlists.Spanish)
+	case "diceware1":
+		bip39.SetWordList(morelists.Diceware1)
+	case "diceware2":
+		bip39.SetWordList(morelists.Diceware2)
+	case "diceware3":
+		bip39.SetWordList(morelists.Diceware3)
+	case "diceware4":
+		bip39.SetWordList(morelists.Diceware4)
 	default:
 		bip39.SetWordList(wordlists.English)
 	}
