@@ -26,7 +26,7 @@ func TestWords(t *testing.T) {
 }
 
 func TestWordsWithDicewareList(t *testing.T) {
-	if len(morelists.Diceware1) != 2048 || len(morelists.Diceware2) != 2048 || len(morelists.Diceware3) != 2048 || len(morelists.Diceware4) != 2048 {
+	if len(morelists.Diceware1) != 2048 || len(morelists.Diceware2) != 2048 || len(morelists.Diceware3) != 2048 || len(morelists.Diceware4) != 2048 || len(morelists.DicewareShort) != 2048 {
 		t.Fail()
 	}
 }

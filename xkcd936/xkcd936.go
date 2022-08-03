@@ -45,6 +45,8 @@ func Words(n int, lang string) []string {
 		bip39.SetWordList(morelists.Diceware3)
 	case "diceware4":
 		bip39.SetWordList(morelists.Diceware4)
+	case "dicewareshort", "diceware2k":
+		bip39.SetWordList(morelists.DicewareShort)
 	default:
 		bip39.SetWordList(wordlists.English)
 	}
