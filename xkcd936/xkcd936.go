@@ -3,6 +3,9 @@ package xkcd936
 import (
 	"strings"
 
+	"golang.org/x/text/cases"
+	"golang.org/x/text/language"
+
 	"github.com/tyler-smith/go-bip39"
 )
 
@@ -23,7 +26,7 @@ func Phrase(words []string, titlized bool) string {
 	if titlized {
 		phrase := ""
 		for _, word := range words {
-			phrase += strings.Title(word)
+			phrase += cases.Title(language.English).String(word)
 		}
 		return phrase
 	} else {
