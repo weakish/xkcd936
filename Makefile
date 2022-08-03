@@ -1,9 +1,9 @@
 include config.mk
 
 bin/xkcd936: main.go xkcd936/xkcd936.go
-	@go build -o bin
+	@go build -o bin/xkcd936
 
-install:
+install: bin/xkcd936
 	@mkdir -p ${PREFIX}/bin
 	@install bin/xkcd936 ${PREFIX}/bin
 
