@@ -1,5 +1,9 @@
 github.com/tyler-smith/go-bip39 v1.1.0 h1:5eUemwrMargf3BSLRRCalXT93Ns6pQJIjYQN2nyfOP8=
 github.com/tyler-smith/go-bip39 v1.1.0/go.mod h1:gUYDtqQw1JS3ZJ8UWVcGTGqqr6YIN3CWg+kkNaLt55U=
+github.com/weakish/goaround v0.1.0 h1:IZ6x8cdVohR4EQ8gm5wjMFjLj0N4PYVt8OcJMTZECAE=
+github.com/weakish/goaround v0.1.0/go.mod h1:CJ36zFfnNKHdmHA7XYOOertHB8zE9F/OQnhbFvIlX94=
+github.com/weakish/gosugar v0.3.0 h1:9B4BbzE/CIj6CnYm5O7lMTw07N1I1jmVS6x1zt0/vzE=
+github.com/weakish/gosugar v0.3.0/go.mod h1:AOraJUDpLnFP+3lft0LYhn8jkUWDSg7cDHcyRMXFo/o=
 golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod h1:djNgcEr1/C05ACkg1iLfiJU5Ep61QUkGW8qpdssI0+w=
 golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9 h1:psW17arqaxU48Z5kZ0CQnkZWQJsqcURM6tKiBApRjXI=
 golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9/go.mod h1:LzIPMQfyMNhhGPhUkYOs5KpL4U8rLKemX1yGLhDgUto=

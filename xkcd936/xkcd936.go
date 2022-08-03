@@ -1,8 +1,9 @@
 package xkcd936
 
 import (
-	"github.com/tyler-smith/go-bip39"
 	"strings"
+
+	"github.com/tyler-smith/go-bip39"
 )
 
 func Words(n int) []string {
@@ -18,10 +19,14 @@ func Words(n int) []string {
 	return words[0:n]
 }
 
-func Phrase(words []string) string {
-	phrase := ""
-	for _, word := range words {
-		phrase += strings.Title(word)
+func Phrase(words []string, titlized bool) string {
+	if titlized {
+		phrase := ""
+		for _, word := range words {
+			phrase += strings.Title(word)
+		}
+		return phrase
+	} else {
+		return strings.Join(words, " ")
 	}
-	return phrase
 }

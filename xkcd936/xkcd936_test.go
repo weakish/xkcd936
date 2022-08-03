@@ -6,8 +6,14 @@ import (
 )
 
 func ExamplePhrase() {
-	fmt.Println(Phrase([]string{"hello", "world"}))
-	// Output: HelloWorld
+	fmt.Println(Phrase([]string{"hello", "world"}, false))
+	// Output: hello world
+}
+
+func TestPhraseTitlized(t *testing.T) {
+	if Phrase([]string{"hello", "world"}, true) != "HelloWorld" {
+		t.Fail()
+	}
 }
 
 func TestWords(t *testing.T) {

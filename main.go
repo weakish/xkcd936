@@ -1,36 +1,23 @@
 package main
 
 import (
+	"flag"
 	"fmt"
+
 	"github.com/weakish/xkcd936/xkcd936"
-	"os"
-	"strconv"
 )
 
-const version = "0.2.0"
-
-func usage(exitCode int) {
-	fmt.Print("xkcd936 [LENGTH]\n\n1 <= LENGTH <= 12. If not specified, it will generate four words.\n")
-	os.Exit(exitCode)
-}
+const semver = "0.3.0"
 
 func main() {
-	switch len(os.Args) {
-	case 1:
-		fmt.Println(xkcd936.Phrase(xkcd936.Words(4)))
-	case 2:
-		switch arg := os.Args[1]; arg {
-		case "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12":
-			n, _ := strconv.ParseInt(arg, 10, 0)
-			fmt.Println(xkcd936.Phrase(xkcd936.Words(int(n))))
-		case "-h", "--help", "help":
-			usage(0)
-		case "--version", "version":
-			fmt.Printf("xkcd936 %s\n", version)
-		default:
-			usage(64)
-		}
-	default:
-		usage(64)
+	var titlized *bool = flag.Bool("t", false, "join titlized words")
+	var version *bool = flag.Bool("V", false, "show version")
+	var number *int = flag.Int("n", 4, "number of words, 1 <= n <= 12")
+	flag.Parse()
+
+	if *version {
+		fmt.Printf("xkcd936 %s\n", semver)
+	} else {
+		fmt.Println(xkcd936.Phrase(xkcd936.Words(*number), *titlized))
 	}
 }

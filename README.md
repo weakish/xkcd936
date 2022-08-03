@@ -8,8 +8,7 @@ To compile from source, you need to have `go` installed.
 
     git clone https://github.com/weakish/xkcd936
     cd xkcd936
-    make
-    sudo make install
+    make install
 
 To change installation path (default to `/usr/local/bin`),
 edit `config.mk` before running `make`.
@@ -23,16 +22,25 @@ The Makefile is compatible with both GNU make and BSD make.
 
 ### As a Commandline Utility
 
-```sh
-xkcd936 n # n: from 1 to 12
-xkcd936   # defaults to 4
-```
-
 Example output:
 
-```go
+```sh
+; xkcd936
+subway modify spoil basic
+```
+
+To fulfill password requirements from some websites
+(white space is not allowed and/or mix case is required),
+xkcd936 can also output titlized words:
+
+```sh
+; xkcd936 -t
 AdvanceJealousDevelopSenior
 ```
+
+By default, xkcd936 will generate four words,
+consistent with the [xkcd936] comic.
+But xkcd936 can generate up to 12 words with the number specified in `-n`.
 
 ### As a Library
 
@@ -42,7 +50,7 @@ import (
 )
 
 var words []string = xkcd936.Words(4) // e.g. []string{"cannon", "isolate", "soccer", "word"}
-var phrase string = xkcd936.Phrase(words) // e.g. "CannonIsolateSoccerWord"
+var phrase string = xkcd936.Phrase(words, true) // e.g. "CannonIsolateSoccerWord"
 ```
 
 ## License
