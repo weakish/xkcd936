@@ -13,7 +13,7 @@ func main() {
 	var titlized *bool = flag.Bool("t", false, "titlized words (English only)")
 	var version *bool = flag.Bool("V", false, "show version")
 	var number *int = flag.Int("n", 4, "number of words, 1 <= n <= 12")
-	var list *string = flag.String("l", "en", "word list: chs, cht, cs, en, fr, it, jp, ko, es")
+	var list *string = flag.String("l", "en", "word list: chs, cht, cs, en, fr, it, jp, ko, es, diceware{1,2,3,4} (split from diceware8k), diceware2k")
 	flag.Parse()
 
 	if *version {

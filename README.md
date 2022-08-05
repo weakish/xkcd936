@@ -4,7 +4,7 @@
 
 ## Installation
 
-To compile from source, you need to have `go` installed.
+To compile from the source, you need to have golang installed on the system.
 
     git clone https://github.com/weakish/xkcd936
     cd xkcd936
@@ -41,6 +41,17 @@ AdvanceJealousDevelopSenior
 By default, xkcd936 will generate four words,
 consistent with the [xkcd936] comic.
 But xkcd936 can generate up to 12 words with the number specified in `-n`.
+
+By default, the BIP32 English word list is used.
+To use a BIP32 word list in another language, specify it in `-l`.
+
+Some diceware-derived lists can also be used:
+
+    - `diceware{1,2,3,4}`: four lists split from [diceware8k], containing 2048 words each.
+    - `diceware2k`: [a wordlist derived from diceware8k][diceware2k], containing 2048 short words.
+
+[diceware8k]: https://theworld.com/~reinhold/diceware8k.txt
+[diceware2k]: https://diceware2k.surge.sh
 
 ### As a Library
 

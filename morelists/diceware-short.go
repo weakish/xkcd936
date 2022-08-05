@@ -9,7 +9,7 @@ var DicewareShort = strings.Split(strings.TrimSpace(diceware2k), "\n")
 //
 //     cat diceware8k.txt | egrep '^.{2,3}$' | wc -l # 2028
 //
-// And diceware8k contains 51 single character "word": (seperated by comma):
+// And diceware8k contains 51 single character "words": (seperated by comma):
 //
 //     ; cat diceware8k.txt | egrep '^.$' | tr '\n' ','
 //     a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,
