@@ -12,10 +12,10 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     strategy:
       matrix:
-        go: [ "1.14.12", "1.15.5" ]
+        go: [ "1.16.15", "1.17.13", "1.18", "1.19" ]
     name: Test against Go ${{ matrix.go }}
     steps:
       - name: Checkout code
