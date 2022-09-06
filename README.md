@@ -60,7 +60,8 @@ import (
 	"github.com/weakish/xkcd936/xkcd936"
 )
 
-var words []string = xkcd936.Words(4) // e.g. []string{"cannon", "isolate", "soccer", "word"}
+// nil means using the default BIP32 English word list
+var words []string = xkcd936.Words(4, nil) // e.g. []string{"cannon", "isolate", "soccer", "word"}
 var phrase string = xkcd936.Phrase(words, true) // e.g. "CannonIsolateSoccerWord"
 ```
 
