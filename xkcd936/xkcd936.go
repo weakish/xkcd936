@@ -59,7 +59,7 @@ func Words(n int, lang string) []string {
 
 func Phrase(words []string, titlized bool) string {
 	if titlized {
-		phrase := ""
+		var phrase string = ""
 		for _, word := range words {
 			phrase += cases.Title(language.English).String(word)
 		}
