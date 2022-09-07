@@ -61,7 +61,7 @@ func Phrase(words []string, titlized bool) string {
 	if titlized {
 		var phrase string = ""
 		for _, word := range words {
-			phrase += cases.Title(language.English).String(word);
+			phrase += cases.Title(language.English).String(word)
 		}
 		return phrase
 	} else {
