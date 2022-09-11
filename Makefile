@@ -10,9 +10,6 @@ install: bin/xkcd936
 uninstall:
 	@rm -f ${PREFIX}/bin/xkcd936
 
-clean:
-	@rm -f bin/xkcd936
-
 test:
 	@cd xkcd936 && go test
 

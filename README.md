@@ -4,10 +4,13 @@
 
 ## Installation
 
-To compile from the source, you need to have golang installed on the system.
+Installation from the source requires Go installed on the system.
 
-    git clone https://github.com/weakish/xkcd936
-    cd xkcd936
+    git clone https://github.com/weakish/xkcd935
+    cd xkcd935
+
+### Make
+
     make install
 
 To change installation path (default to `/usr/local/bin`),
@@ -17,6 +20,19 @@ To uninstall, run `make uninstall`.
 
 The Makefile is compatible with both GNU make and BSD make.
 
+### DoIt
+
+It is also possible to use [DoIt] with Python >= 3.10 instead of make.
+
+```sh
+doit install
+```
+
+[DoIt]: https://pydoit.org
+
+This will install the binary to `/usr/local/bin`.
+
+To uninstall, run `doit uninstall`.
 
 ## Usage
 
