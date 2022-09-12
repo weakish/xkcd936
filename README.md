@@ -30,7 +30,8 @@ doit install
 
 [DoIt]: https://pydoit.org
 
-This will install the binary to `/usr/local/bin`.
+To change installation path (default to `/usr/local/bin`),
+run `doit install --prefix /absolute/path` instead.
 
 To uninstall, run `doit uninstall`.
 
